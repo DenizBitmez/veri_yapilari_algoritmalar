@@ -7,10 +7,20 @@ public class Application {
         One_way_list_structure list = new One_way_list_structure();
         list.addFirst(82);
         list.addFirst(83);
+
         list.addLast(90);
         list.addLast(91);
+
         list.addbetween(50,3);
         list.addbetween(89,4);
+
+        list.deleteFirst();
+        list.deleteFirst();
+        list.deleteFirst();
+
+        list.deletelast();
+        list.deletelast();
+
         list.print();
 
     }

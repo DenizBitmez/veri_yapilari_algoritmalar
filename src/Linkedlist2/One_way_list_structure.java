@@ -77,6 +77,39 @@ public class One_way_list_structure {
 
     }
 
+    void deleteFirst(){
+        if (head==null) {
+            System.out.println("list is empty, there's nothing to delete");
+        }else if(head.next==null) {
+            head=null;
+            tail=null;
+            System.out.println("list's last object is deleted");
+        }else{
+            head=head.next;
+            System.out.println("list's first object is deleted");
+        }
+    }
+
+    void deletelast(){
+        if (head==null) {
+            System.out.println("list is empty, there's nothing to delete");
+        }else if(head.next==null) {
+            head=null;
+            tail=null;
+            System.out.println("list's last object is deleted");
+        }else{
+            Node temp=head;
+            Node temp2=head;
+            while (temp.next!=null) {
+                temp2=temp;
+                temp=temp.next;
+            }
+            temp2.next=null;
+            tail=temp2;
+            System.out.println("list's last object is deleted");
+        }
+    }
+
     void print(){
         if(head==null){
             System.out.println("List structure is empty");
