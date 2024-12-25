@@ -1,4 +1,4 @@
-package dugum_olusturma;
+package creating_node;
 
 public class Main1 {
     public static void main(String[] args) {
