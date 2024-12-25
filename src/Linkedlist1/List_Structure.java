@@ -1,4 +1,4 @@
-package Linkedlist_1.ders;
+package Linkedlist1;
 
 public class List_Structure {
 
