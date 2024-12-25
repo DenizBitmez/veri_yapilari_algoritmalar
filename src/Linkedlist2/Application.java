@@ -9,7 +9,8 @@ public class Application {
         list.addFirst(83);
         list.addLast(90);
         list.addLast(91);
-
+        list.addbetween(50,3);
+        list.addbetween(89,4);
         list.print();
 
     }
