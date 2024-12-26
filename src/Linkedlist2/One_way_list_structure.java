@@ -109,6 +109,45 @@ public class One_way_list_structure {
             System.out.println("list's last object is deleted");
         }
     }
+    void deleteBetween(int index){
+        if (head==null) {
+            System.out.println("list is empty, there's nothing to delete");
+        } else if (head.next==null && index==0) {
+            head=null;
+            tail=null;
+            System.out.println("list's last object is deleted");
+        }
+        else if(head.next!=null && index==0) {
+            head=head.next;
+            System.out.println("list's first object is deleted");
+        }
+        else {
+            int i=0;
+            Node temp=head;
+            Node temp2=head;
+            while (temp!=null) {
+                i++;
+                temp2=temp;
+                temp=temp.next;
+            }
+            if (i==index){
+                temp2.next=null;
+                tail=temp2;
+                System.out.println("list's last object is deleted");
+            }else{
+                temp=head;
+                temp2=head;
+                int j=0;
+                while (j!=index) {
+                    temp=temp.next;
+                    temp2=temp;
+                    j++;
+                }
+                temp2.next=temp.next;
+                System.out.println("Between object is deleted");
+            }
+        }
+    }
 
     void print(){
         if(head==null){
