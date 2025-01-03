@@ -70,6 +70,28 @@ public class LinkedlistClass {
         }
     }
 
+    void deleteFirst(){
+        if (head==null) {
+            head=null;
+            tail=null;
+        }
+        else{
+            head=head.next;
+            head.prev=null;
+        }
+    }
+
+    void deleteLast(){
+        if (head==null) {
+            head=null;
+            tail=null;
+        }
+        else{
+            tail=tail.prev;
+            tail.next=null;
+        }
+    }
+
     void print(){
         Node temp=tail;
         System.out.println("last ->");

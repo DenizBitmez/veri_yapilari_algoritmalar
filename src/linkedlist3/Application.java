@@ -14,7 +14,9 @@ public class Application {
             System.out.println("2-add last");
             System.out.println("3-print last to first");
             System.out.println("4-add between");
-            System.out.println("5-print");
+            System.out.println("5-delete first");
+            System.out.println("6-delete last");
+            System.out.println("7-print");
             System.out.println("Your Choice:");
             Scanner sc = new Scanner(System.in);
             choice = sc.nextInt();
@@ -40,6 +42,14 @@ public class Application {
                 System.out.println("Number:");
                 number = sc.nextInt();
                 linkedlist1.addBetween(index, number);
+            }
+
+            if (choice==5){
+                linkedlist1.deleteFirst();
+            }
+
+            if (choice==6){
+                linkedlist1.deleteLast();
             }
 
             linkedlist1.print();
