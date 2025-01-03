@@ -32,6 +32,44 @@ public class LinkedlistClass {
         }
     }
 
+    void addBetween(int index, int data){
+        Node newNode2=new Node(data);
+        if (head==null) {
+            head=newNode2;
+            tail=newNode2;
+        }
+        else if(head!=null &&index==0){
+            newNode2.next=head;
+            head.prev=newNode2;
+            head=newNode2;
+        }
+        else{
+            int n=0;
+            Node temp=head;
+            while (temp!=null){
+                temp=temp.next;
+                n++;
+            }
+            temp=head;
+            if (index>n){
+                tail.next=newNode2;
+                newNode2.prev=tail;
+                tail=newNode2;
+            }
+            else{
+                int i=0;
+                while (i!=index){
+                    temp=temp.next;
+                    i++;
+                }
+                newNode2.prev=temp.prev;
+                temp.prev.next=newNode2;
+                newNode2.next=temp;
+                temp.prev=newNode2;
+            }
+        }
+    }
+
     void print(){
         Node temp=tail;
         System.out.println("last ->");

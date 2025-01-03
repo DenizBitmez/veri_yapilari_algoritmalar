@@ -8,12 +8,13 @@ public class Application {
         linkedlist1.addFirst(10);
         linkedlist1.addLast(20);
 
-        int choice=1, number;
+        int choice=1, number, index;
         while (choice!=0){
             System.out.println("1-add first");
             System.out.println("2-add last");
-            System.out.println("3-print");
-            System.out.println("4-print last to first");
+            System.out.println("3-print last to first");
+            System.out.println("4-add between");
+            System.out.println("5-print");
             System.out.println("Your Choice:");
             Scanner sc = new Scanner(System.in);
             choice = sc.nextInt();
@@ -32,6 +33,13 @@ public class Application {
                 System.out.println("Number:");
                 number = sc.nextInt();
                 linkedlist1.printLast();
+            }
+            if (choice==4){
+                System.out.println("İndex:");
+                index = sc.nextInt();
+                System.out.println("Number:");
+                number = sc.nextInt();
+                linkedlist1.addBetween(index, number);
             }
 
             linkedlist1.print();
